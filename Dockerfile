@@ -4,7 +4,8 @@ USER ubuntu
 WORKDIR /home/ubuntu
 ENV PATH /home/ubuntu/ruby/bin:$PATH
 RUN fluent-gem install fluent-plugin-elasticsearch --no-document \
-    && fluent-gem install fluent-plugin-docker-format --no-document
+    && fluent-gem install fluent-plugin-docker-format --no-document \
+    && fluent-gem install fluent-plugin-parser --no-document
 
 USER root
 
